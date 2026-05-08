@@ -12,7 +12,7 @@ Find information about integrating your App with Tembowave. This documentation i
 
 | Environment | URL |
 |---|---|
-| Sandbox / Testing | `https://saasapi_dev.tembowave.co.tz/` |
+| Sandbox / Testing | `https://saasapi.tembowave.co.tz/` |
 | Production / Live | `https://saasapi.tembowave.co.tz/` |
 
 ## Error Object
@@ -45,11 +45,11 @@ Tembowave API Authentication requests are done via a `POST` request.
 Your Tembowave Business `client_id` and `password` will be used to generate an access token. This access token is valid for a maximum period of 5 minutes. Use this token (sent as a Bearer Token) to access all other Tembowave API 1.0 endpoints.
 
 The URL to the API service is either:
-* **Sandbox/Demo URL:** `https://saasapi_dev.tembowave.co.tz/v1/auth/clientLogin`
-* **Production/Live URL:** `https://saasapi_dev.tembowave.co.tz/v1/auth/clientLogin`
+* **Sandbox/Demo URL:** `https://saasapi.tembowave.co.tz/v1/auth/clientLogin`
+* **Production/Live URL:** `https://saasapi.tembowave.co.tz/v1/auth/clientLogin`
 
 ### Endpoint
-`POST /api/v1/auth/clientLogin`
+`POST /v1/auth/clientLogin`
 
 ### HTTP Request Headers
 | Parameter | Required | Description |
@@ -88,10 +88,10 @@ Please click here to open a live/production client account.
 
 ### Example Request (cURL)
 ```bash
-curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/auth/clientLogin' \
+curl --location 'https://saasapi.tembowave.co.tz/v1/auth/clientLogin' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---data '{
+--data '{a
     "client_id": "f1843585-53f7-4426-b11b-fcc1f15ac116",
     "password": "v*PK1u"
 }'
@@ -104,11 +104,11 @@ curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/auth/clientLogin' \
 Once you have received the bearer token, the next step will be the actual request to create a fiscalize invoice / receipt.
 
 The URL to our Invoice API is either:
-* **Sandbox/Demo URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/createInvoice`
-* **Production/Live URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/createInvoice`
+* **Sandbox/Demo URL:** `https://saasapi.tembowave.co.tz/v1/vfd/createInvoice`
+* **Production/Live URL:** `https://saasapi.tembowave.co.tz/v1/vfd/createInvoice`
 
 ### Endpoint
-`POST /api/v1/client/createInvoice`
+`POST /v1/vfd/createInvoice`
 
 ### HTTP Request Headers
 | Parameter | Required | Value |
@@ -174,7 +174,7 @@ The URL to our Invoice API is either:
 
 ### Example Request (cURL)
 ```bash
-curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/client/createInvoice' \
+curl --location 'https://saasapi.tembowave.co.tz/v1/vfd/createInvoice' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer <access_token>' \
@@ -214,11 +214,11 @@ curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/client/createInvoice
 Use this endpoint to fetch previously created invoices.
 
 The URL to our Invoice API is either:
-* **Sandbox/Demo URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/invoices`
-* **Production/Live URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/invoices`
+* **Sandbox/Demo URL:** `https://saasapi.tembowave.co.tz/v1/vfd/invoices`
+* **Production/Live URL:** `https://saasapi.tembowave.co.tz/v1/vfd/invoices`
 
 ### Endpoint
-`POST /api/v1/client/invoices`
+`POST /v1/vfd/invoices`
 
 ### HTTP Request Headers
 | Parameter | Required | Value |
@@ -229,7 +229,7 @@ The URL to our Invoice API is either:
 
 ### Example Request (cURL)
 ```bash
-curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/client/invoices' \
+curl --location 'https://saasapi.tembowave.co.tz/v1/vfd/invoices' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer <access_token>' \
@@ -334,11 +334,11 @@ curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/client/invoices' \
 Use this endpoint to resend a previously created invoice.
 
 The URL to our Invoice API is either:
-* **Sandbox/Demo URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/resendInvoice`
-* **Production/Live URL:** `https://saasapi_dev.tembowave.co.tz/api/v1/client/resendInvoice`
+* **Sandbox/Demo URL:** `https://saasapi.tembowave.co.tz/v1/vfd/resendInvoice`
+* **Production/Live URL:** `https://saasapi.tembowave.co.tz/v1/vfd/resendInvoice`
 
 ### Endpoint
-`POST /api/v1/client/resendInvoice`
+`POST /v1/vfd/resendInvoice`
 
 ### HTTP Request Headers
 | Parameter | Required | Value |
@@ -349,7 +349,7 @@ The URL to our Invoice API is either:
 
 ### Example Request (cURL)
 ```bash
-curl --location 'https://saasapi_dev.tembowave.co.tz/api/v1/client/resendInvoice' \
+curl --location 'https://saasapi.tembowave.co.tz/v1/vfd/resendInvoice' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: Bearer <access_token>' \
